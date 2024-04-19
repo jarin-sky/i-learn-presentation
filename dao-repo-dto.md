@@ -8,25 +8,25 @@
 
 ## DAO
 
-- #### What is DAO?
+#### What is DAO?
 Within Spring Boot, the DAO (Data Access Object) pattern is typically used to separate the data access logic from the rest of the application and to ensure proper integration with the data source, such as a database.
 
 DAO stands for Data Access Object. It is a design pattern used in software engineering that separates the business logic of an application from the method of accessing data. DAO provides an abstraction for accessing data in a database or other data storage. This means that DAO provides a unified interface for communicating with the data storage, whether it's a relational database, object-relational mapping (ORM), or other data repository.
-- #### Components
-  - ##### DAO Interface
+#### Components
+##### DAO Interface
   This is the core component of the pattern. It defines a set of methods for performing CRUD (Create, Read, Update, Delete) operations on the data source. It typically includes methods for saving, retrieving, updating, and deleting data objects. The DAO interface serves as a contract that concrete implementations must adhere to.
   
-  - ##### DAO Implementation
+##### DAO Implementation
   Concrete classes that implement the DAO interface. These classes contain the actual logic for interacting with the underlying data source, such as executing SQL queries, calling web services, or accessing a file system. The DAO implementation is responsible for handling the low-level details of data access, such as opening connections, executing queries, and managing transactions.
 Overall, repositories in Spring Data provide a convenient and efficient way to interact with data sources, promoting cleaner code organization and improved maintainability of Spring-based applications.
-- #### Responsibilities
-  - ##### Exception handling
+#### Responsibilities
+##### Exception handling
   DAO implementations often handle exceptions that may occur during data access operations, such as database connection failures, query errors, or concurrency issues. Proper exception handling ensures that the application can gracefully recover from errors and provide meaningful feedback to the user.
 
-  - ##### Dependency Injection
+##### Dependency Injection
   In modern application development frameworks like Spring, DAO instances are often managed as Spring beans and injected into other components using dependency injection. This allows for easier management of dependencies and promotes loose coupling between components.
 
-- #### Using in Spring Boot
+#### Using in Spring Boot
 
 ```java
 
@@ -97,13 +97,13 @@ public class ProductController {
 
 ## Repository
 
-- #### What is Repository?
+#### What is Repository?
 Repository is another abstraction for data access that is specific to JPA (Java Persistence API), which is a part of Java EE and the Spring Framework. Repository within Spring is specific to Spring Data JPA. In this context, Repository provides a simple and intuitive interface for working with the database using JPA. Repository allows performing common data operations such as creating, reading, updating, and deleting (CRUD operations) using methods defined in the interface.
 
 Under the hood, Spring Data repositories leverage Spring's powerful dependency injection mechanism along with various persistence technologies (such as JPA, MongoDB, Cassandra, Redis, etc.) to provide implementations of the defined repository interfaces at runtime. This allows developers to focus more on business logic and less on boilerplate code related to data access.
 
 Overall, the Repository is a specialized form of DAO that focuses on Object-Relational Mapping in the context of modern frameworks like Spring Data. Repository provides a higher level of abstraction and is often more domain-oriented than the generic DAO.
-- #### Using of Repository
+#### Using of Repository
 
 ```java
 
@@ -175,7 +175,7 @@ public class UserService {
 
 ## DTO (Data Transfer Object)
 
-- #### What is DTO?
+#### What is DTO?
 
 DTO in Spring Boot stands for "Data Transfer Object" and is a design pattern commonly used in Spring Boot-based applications.
 
@@ -185,7 +185,7 @@ For example, if you have an object representing an entity in the database, such 
 
 Overall, using DTOs in Spring Boot applications helps improve modularity, readability, and maintainability of the code.
 
-- #### Using of DTO
+#### Using of DTO
 
 Let's assume we have an entity `User` representing a user of the application:
 
